@@ -62,6 +62,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/homepage_above.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -83,6 +84,10 @@ flutter:
      - family: majalla
        fonts:
          - asset: assets/fonts/majalla.ttf
+
+     - family: Pangolin
+       fonts:
+         - asset: assets/fonts/Pangolin.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
