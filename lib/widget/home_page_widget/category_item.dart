@@ -1,5 +1,7 @@
 import 'package:cafeflower/model_varibale/list_category_item.dart';
 import 'package:flutter/material.dart';
+
+import '../../cool/colorcore.dart';
 class CategoryItem extends StatelessWidget{
 
   int index;
@@ -34,7 +36,7 @@ class CategoryItem extends StatelessWidget{
         ),
         Text(categoryList[index].name,
           style: TextStyle(
-            color: Color(0xff3C312F),
+            color: ColorApp.basic_color,
             fontSize: 13,
             fontWeight: FontWeight.w400,
           ),

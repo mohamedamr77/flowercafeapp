@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../cool/colorcore.dart';
+
 class CustomListtile  extends StatelessWidget{
   String text;
 
@@ -10,7 +12,7 @@ class CustomListtile  extends StatelessWidget{
     return ListTile(
       leading:Text(text,
         style: TextStyle(
-          color: Color(0xff3C312F),
+          color: ColorApp.basic_color,
           fontSize: 16,
           fontWeight: FontWeight.w400,
         ),

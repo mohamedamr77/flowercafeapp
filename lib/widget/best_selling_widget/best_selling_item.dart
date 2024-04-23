@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../cool/colorcore.dart';
 import '../../model_varibale/list_best_selling.dart';
 
 class CustomBestSellingItem extends StatelessWidget {
@@ -15,7 +16,7 @@ class CustomBestSellingItem extends StatelessWidget {
               gradient: LinearGradient(
                   colors: [
                     Color(0xffF7CCC6).withOpacity(0.25),
-                    Colors.white
+                    ColorApp.white_color
                   ],
                   begin:Alignment.topCenter,
                   end:Alignment.bottomCenter,
@@ -23,8 +24,7 @@ class CustomBestSellingItem extends StatelessWidget {
               ),
               borderRadius: BorderRadius.all(Radius.circular(20)),
               border: Border.all(
-                color: Color(0xffF7CCC6),
-
+                color: ColorApp.border_container_bestselling_color,
               )
           ),
         ),
@@ -43,12 +43,12 @@ class CustomBestSellingItem extends StatelessWidget {
           right: 3,
           top: 4,
           child: CircleAvatar(
-            backgroundColor: Colors.white ,
+            backgroundColor: ColorApp.white_color ,
             child: Center(
               child: IconButton(
                 onPressed: () {},
                 icon:
-                Icon(Icons.favorite_border, color :Color(0xff3C312F)),
+                Icon(Icons.favorite_border, color :ColorApp.basic_color),
 
               ),
             ),
@@ -60,7 +60,7 @@ class CustomBestSellingItem extends StatelessWidget {
           left: 8,
           child: Text(bestSellingList[index].nameProduct,
             style: TextStyle(
-              color: Color(0xff3C312F),
+              color: ColorApp.basic_color,
               fontSize: 13,
               fontWeight: FontWeight.w500,
             ),
@@ -72,7 +72,7 @@ class CustomBestSellingItem extends StatelessWidget {
           left: 8,
           child: Text("Flavor : ${bestSellingList[index].flavor}",
             style: TextStyle(
-              color: Color(0xff959595),
+              color: ColorApp.flavor_color,
               fontSize: 13,
               fontWeight: FontWeight.w500,
             ),
@@ -84,7 +84,7 @@ class CustomBestSellingItem extends StatelessWidget {
           left: 12,
           child: Text("${bestSellingList[index].price} LE",
             style: TextStyle(
-              color: Color(0xff3C312F),
+              color: ColorApp.basic_color,
               fontSize: 13,
               fontWeight: FontWeight.bold,
             ),

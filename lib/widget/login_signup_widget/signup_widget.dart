@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/colorcore.dart';
 import 'package:cafeflower/cool/imagecore.dart';
 import 'package:cafeflower/widget/login_signup_widget/text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -22,14 +23,14 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorApp.white_color,
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               colors: [
                 Color(0xffF7CCC6),
-                Colors.white,
+               ColorApp.white_color,
               ]
           ),
         ),
@@ -47,7 +48,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                   const Text("Sign Up",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xff3C312F),
+                      color: ColorApp.basic_color,
                       fontSize: 40,
                       fontFamily: "majalla",
                       fontWeight: FontWeight.w400,
@@ -121,8 +122,8 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
 
                   CustomButton(
                     text: 'Sign up',
-                    backgroundColor: const Color(0xffFFEFEF),
-                    textColor:  Color(0xff3C312F).withOpacity(0.9),
+                    backgroundColor: ColorApp.bg_signupButton_color,
+                    textColor:  ColorApp.basic_color.withOpacity(0.9),
                     onTap: () {
                       if(formstate.currentState!.validate()){
                         print("valid");
@@ -151,8 +152,8 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
 
                   CustomButton(
                     text: "Login With Google",
-                    backgroundColor: Colors.white,
-                    textColor: Color(0xff3C312F).withOpacity(0.9),
+                    backgroundColor:   ColorApp.white_color,
+                    textColor:   ColorApp.basic_color.withOpacity(0.9),
                     onTap: () { },
                     child: Image.asset(ImageApp.google_icon_Image),
                   ),
@@ -161,16 +162,16 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
 
                   CustomButton(
                     text: "Login With Facebook",
-                    backgroundColor:Colors.blueAccent,
-                    textColor: Colors.white,
+                    backgroundColor:ColorApp.bg_facebookButton_color,
+                    textColor:   ColorApp.white_color,
                     onTap: () { },
                     child: const CircleAvatar(
-                      backgroundColor: Colors.white,
+                      backgroundColor: ColorApp.white_color,
                       child: Center(
                         child: Text("f",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Color(0xff0529EB),
+                            color:   ColorApp.bg_facebookicon_color,
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
                             fontFamily: "JetBrainsMono-Regular",
@@ -191,7 +192,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Inter-Regular",
-                            color: Colors.black,
+                            color: ColorApp.black_color,
                           ),
                         ),
                         SizedBox(width: 12,),
@@ -201,7 +202,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Inter-Regular",
-                            color: Colors.black,
+                            color: ColorApp.black_color,
                           ),
                         ),
                         SizedBox(width: 12,),
@@ -211,7 +212,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: "Inter-Regular",
-                            color: Colors.black,
+                            color: ColorApp.black_color,
                           ),
                         ),
                       ]

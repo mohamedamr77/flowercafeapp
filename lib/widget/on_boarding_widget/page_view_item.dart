@@ -2,14 +2,11 @@ import 'package:cafeflower/model_varibale/list_pageview.dart';
 import 'package:cafeflower/ui/home_page_Screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import '../../cool/colorcore.dart';
 import '../../model_varibale/variable.dart';
-
 class CustomPageViewItem extends StatefulWidget{
   int index;
-
   CustomPageViewItem({super.key,required this.index});
-
   @override
   State<CustomPageViewItem> createState() => _CustomPageViewItemState();
 }
@@ -45,7 +42,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
               fontWeight: FontWeight.w400,
               fontSize: 22,
               fontFamily: "majalla",
-              color: Color(0xff3C312F).withOpacity(0.65),
+              color:ColorApp.basic_color.withOpacity(0.65),
             ),
           ),
         ),
@@ -70,7 +67,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
           "Next"
           ,),
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xff3C312F),
+              backgroundColor: ColorApp.basic_color,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(60),
@@ -96,7 +93,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
               decoration: BoxDecoration(
                   color:
                   VariableApp.currentIndex==index?
-                  Color(0xff3C312F)
+                  ColorApp.basic_color
                       :
                   Color(0xff3C312F33).withOpacity(0.25),
                   shape: BoxShape.circle

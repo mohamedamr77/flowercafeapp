@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/colorcore.dart';
 import 'package:flutter/material.dart';
 
 class  CustomTextButton extends StatelessWidget{
@@ -16,7 +17,7 @@ class  CustomTextButton extends StatelessWidget{
           fontSize: 16.0, // Adjust the font size as needed
           fontWeight: FontWeight.w400,
           fontFamily: "Inter-Regular",
-          color: Colors.blue,
+          color: ColorApp.blue_color,
         ),
 
       ),

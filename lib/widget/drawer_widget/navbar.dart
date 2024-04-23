@@ -10,7 +10,7 @@ class NavBar extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("Mohamed amr",
               style: TextStyle(
                   color: Colors.white
@@ -21,10 +21,7 @@ class NavBar extends StatelessWidget {
                   color: Colors.white
               ),
             ),
-            // currentAccountPicture: CircleAvatar(
-            //   backgroundColor: Colors.white,
-            //   backgroundImage: AssetImage("assets/images/appbartitle.png",),
-            // ),
+
             decoration: BoxDecoration(
               color: Colors.orange,
               image: DecorationImage(
@@ -33,7 +30,7 @@ class NavBar extends StatelessWidget {
               ),
             ),
           ),
-          Card(
+          const Card(
             child: ListTile(
               leading: Icon(Icons.account_circle),
               title: Text("Account"),
@@ -45,23 +42,22 @@ class NavBar extends StatelessWidget {
               onTap: (){
                  Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(),));
               },
-              leading: Icon(Icons.login),
-              title: Text("loign or sign Up"),
+              leading: const Icon(Icons.login),
+              title: const Text("loign or sign Up"),
 
             ),
           ),
-          Card(
+          const Card(
             child: ListTile(
               leading: Icon(Icons.account_circle),
               title: Text("Account"),
 
             ),
           ),
-          Card(
+          const Card(
             child: ListTile(
               leading: Icon(Icons.settings),
               title: Text("settings"),
-
             ),
           ),
 

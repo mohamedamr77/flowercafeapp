@@ -10,7 +10,7 @@ class ImageApp{
   static const String appBar_title_Image="assets/images/appbartitle.png";
   static const String google_icon_Image="assets/images/googleicon.png";
   static const String splacScreen_logo_Image="assets/images/iconsplashscreen.png";
-  static const String  homePage_Ofer_Image="assets/images/homepage_ofer.png";
+  static const String  homePage_flower_Image="assets/images/homepage_flower2.jpg";
 
   static const String   milkshake_Drinks_Image="assets/images/Milkshake2.png";
   static const String   spanishLatte_Drinks_Image="assets/images/Spanish latte.png";

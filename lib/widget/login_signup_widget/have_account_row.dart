@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/colorcore.dart';
 import 'package:cafeflower/widget/login_signup_widget/text_button.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class CustomRowAccount extends StatelessWidget{
             fontSize: 16,
             fontFamily: "Inter-Regular",
             fontWeight: FontWeight.w400,
-            color: Colors.black,
+            color: ColorApp.black_color,
           ),),
         const SizedBox(width: 3,),
         CustomTextButton(

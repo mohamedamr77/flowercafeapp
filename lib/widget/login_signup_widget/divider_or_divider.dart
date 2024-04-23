@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../cool/colorcore.dart';
+
 class CustomRowDivider extends StatelessWidget{
   const CustomRowDivider({super.key});
 
@@ -10,7 +12,7 @@ class CustomRowDivider extends StatelessWidget{
         Container(
           height: 2,
           width: MediaQuery.of(context).size.width/2-30,
-          color: Colors.black,
+          color: ColorApp.black_color,
         ),
         const SizedBox(width: 6,),
         const Text("or",
@@ -25,7 +27,7 @@ class CustomRowDivider extends StatelessWidget{
         Container(
           height: 2,
           width: MediaQuery.of(context).size.width/2-30,
-          color: Colors.black,
+          color: ColorApp.black_color,
         ),
       ],
     );
