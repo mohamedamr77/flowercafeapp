@@ -1,8 +1,8 @@
 import 'package:cafeflower/cool/imagecore.dart';
-import 'package:cafeflower/model_varibale/list_pageview.dart';
+import 'package:cafeflower/model_varibale/page_view/list_pageview.dart';
 import 'package:cafeflower/widget/on_boarding_widget/page_view_item.dart';
 import 'package:flutter/material.dart';
-import '../../model_varibale/variable.dart';
+import '../../model_varibale/variable_/variable.dart';
 
 class CustomOnBoardingBody extends StatefulWidget {
   const CustomOnBoardingBody({super.key});

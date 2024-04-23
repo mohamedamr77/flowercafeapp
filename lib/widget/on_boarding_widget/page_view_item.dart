@@ -1,9 +1,9 @@
-import 'package:cafeflower/model_varibale/list_pageview.dart';
+import 'package:cafeflower/model_varibale/page_view/list_pageview.dart';
 import 'package:cafeflower/ui/home_page_Screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../cool/colorcore.dart';
-import '../../model_varibale/variable.dart';
+import '../../model_varibale/variable_/variable.dart';
 class CustomPageViewItem extends StatefulWidget{
   int index;
   CustomPageViewItem({super.key,required this.index});

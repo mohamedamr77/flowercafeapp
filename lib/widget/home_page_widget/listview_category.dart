@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../model_varibale/list_category_item.dart';
+import '../../model_varibale/category/list_category_item.dart';
 import 'category_item.dart';
 
 class CustomListViewCategory extends StatelessWidget{

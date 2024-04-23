@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../ui/favourite_screen.dart';
 import '../../ui/login_screen.dart';
+import '../../ui/signup_screen.dart';
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
@@ -21,9 +23,7 @@ class NavBar extends StatelessWidget {
                   color: Colors.white
               ),
             ),
-
             decoration: BoxDecoration(
-              color: Colors.orange,
               image: DecorationImage(
                 image: AssetImage("assets/images/dividerBgAppBar.jpg"),
                 fit: BoxFit.cover,
@@ -43,14 +43,27 @@ class NavBar extends StatelessWidget {
                  Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(),));
               },
               leading: const Icon(Icons.login),
-              title: const Text("loign or sign Up"),
+              title: const Text("loign"),
 
             ),
           ),
-          const Card(
+          Card(
             child: ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text("Account"),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder:(context) => CustomSignUpScreen(),));
+              },
+              leading: const Icon(Icons.person_add),
+              title: const Text("Sign up"),
+
+            ),
+          ),
+           Card(
+            child: ListTile(
+              leading: Icon(Icons.favorite_outlined),
+              title: Text("Favourites"),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder:(context) => FavouriteScreen(),));
+              },
 
             ),
           ),
@@ -60,7 +73,6 @@ class NavBar extends StatelessWidget {
               title: Text("settings"),
             ),
           ),
-
         ],
       ),
     );

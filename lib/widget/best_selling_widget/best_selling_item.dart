@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import '../../cool/colorcore.dart';
-import '../../model_varibale/list_best_selling.dart';
+import '../../model_varibale/best_selling/list_best_selling.dart';
 
-class CustomBestSellingItem extends StatelessWidget {
+class CustomBestSellingItem extends StatefulWidget {
   int index;
    CustomBestSellingItem({super.key,required this.index});
+
+  @override
+  State<CustomBestSellingItem> createState() => _CustomBestSellingItemState();
+}
+
+class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
   @override
   Widget build(BuildContext context) {
     return   Stack(
@@ -36,7 +42,7 @@ class CustomBestSellingItem extends StatelessWidget {
           child: Image(
             height: 78,
             width: 117,
-            image: AssetImage(bestSellingList[index].image),
+            image: AssetImage(bestSellingList[widget.index].image),
           ),
         ),
         Positioned(
@@ -46,10 +52,14 @@ class CustomBestSellingItem extends StatelessWidget {
             backgroundColor: ColorApp.white_color ,
             child: Center(
               child: IconButton(
-                onPressed: () {},
-                icon:
-                Icon(Icons.favorite_border, color :ColorApp.basic_color),
-
+                onPressed: () {
+                  setState(() {
+                    bestSellingList[widget.index].fav=!bestSellingList[widget.index].fav;
+                  });
+                },
+                icon:  bestSellingList[widget.index].fav==false?
+                Icon(Icons.favorite_border, color :ColorApp.basic_color):
+                Icon(Icons.favorite, color :ColorApp.basic_color)
               ),
             ),
           ),
@@ -58,7 +68,7 @@ class CustomBestSellingItem extends StatelessWidget {
           top: 100,
           bottom: 52,
           left: 8,
-          child: Text(bestSellingList[index].nameProduct,
+          child: Text(bestSellingList[widget.index].nameProduct,
             style: TextStyle(
               color: ColorApp.basic_color,
               fontSize: 13,
@@ -70,7 +80,7 @@ class CustomBestSellingItem extends StatelessWidget {
           top: 118,
           bottom: 34,
           left: 8,
-          child: Text("Flavor : ${bestSellingList[index].flavor}",
+          child: Text("Flavor : ${bestSellingList[widget.index].flavor}",
             style: TextStyle(
               color: ColorApp.flavor_color,
               fontSize: 13,
@@ -82,7 +92,7 @@ class CustomBestSellingItem extends StatelessWidget {
           top: 142,
           bottom: 10,
           left: 12,
-          child: Text("${bestSellingList[index].price} LE",
+          child: Text("${bestSellingList[widget.index].price} LE",
             style: TextStyle(
               color: ColorApp.basic_color,
               fontSize: 13,

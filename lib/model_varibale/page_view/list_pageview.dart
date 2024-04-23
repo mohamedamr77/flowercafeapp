@@ -1,5 +1,5 @@
 import 'package:cafeflower/cool/imagecore.dart';
-import 'package:cafeflower/model_varibale/pageview_model.dart';
+import 'package:cafeflower/model_varibale/page_view/pageview_model.dart';
 
 List<PageViewModel> pageViewModelList=[
   PageViewModel(image: ImageApp.onBoarding_1_LogoImage, nameProduct: "Donuts", description: "Made by hand, from scratch with love",),

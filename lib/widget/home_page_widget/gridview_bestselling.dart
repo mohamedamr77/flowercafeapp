@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../model_varibale/list_best_selling.dart';
+import '../../model_varibale/best_selling/list_best_selling.dart';
 import '../best_selling_widget/best_selling_item.dart';
 
 class CustomGridView extends StatelessWidget{
