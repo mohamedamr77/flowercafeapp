@@ -41,7 +41,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
               key:formstate ,
               child: Column(
                 children: [
+
                   const SizedBox(height: 14,),
+
                   const Text("Sign Up",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -51,7 +53,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
+
                   const SizedBox(height: 14,),
+
                   FieldLoginSignup(
                     text: 'email address',
                       iconButton: null,
@@ -63,7 +67,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                       return null;
                     },
                   ),
+
                   const SizedBox(height: 12,),
+
                   FieldLoginSignup(
                     obscureText: false,
                     text: 'create password',
@@ -76,7 +82,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
 
                   },
                   ),
+
                   const SizedBox(height: 15,),
+
                   FieldLoginSignup(
                     obscureText: obscureText,
                     text: 'Confirm password',
@@ -87,12 +95,14 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                          obscureText=!obscureText;
                        });
                       },
-
-                      icon:onpressed? Icon(Icons.visibility_off,
-                        color:Colors.red,
-                      ):  Icon(Icons.visibility,
-                        color: Colors.blue,
-                      ),
+                      icon:
+                      onpressed==true?
+                      Icon(Icons.visibility_off,
+                      color:Colors.red,
+                    ):
+                    Icon(Icons.visibility,
+                    color: Colors.blue,
+                  ),
 
                     ),
                     validator: (value) {
@@ -106,7 +116,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
 
                   },
                   ),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: 'Sign up',
                     backgroundColor: const Color(0xffFFEFEF),
@@ -120,7 +132,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                       }
                     },
                   ),
+
                   const SizedBox(height: 12,),
+
                   CustomRowAccount(
                     text: "Already have an account?",
                     onPressed:(){
@@ -128,9 +142,13 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                     } ,
                     textButton: "Login" ,
                   ),
+
                   const SizedBox(height: 12,),
+
                   const CustomRowDivider(),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: "Login With Google",
                     backgroundColor: Colors.white,
@@ -138,7 +156,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                     onTap: () { },
                     child: Image.asset(ImageApp.google_icon_Image),
                   ),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: "Login With Facebook",
                     backgroundColor:Colors.blueAccent,
@@ -159,7 +179,9 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 20,),
+
                   const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -194,6 +216,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                         ),
                       ]
                   )
+
                 ],
               ),
             ),

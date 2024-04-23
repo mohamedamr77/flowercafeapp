@@ -1,5 +1,4 @@
 import 'package:cafeflower/cool/imagecore.dart';
-import 'package:cafeflower/widget/login_signup_widget/signup_widget.dart';
 import 'package:cafeflower/widget/login_signup_widget/text_button.dart';
 import 'package:cafeflower/widget/login_signup_widget/text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +38,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
               key:formstate ,
               child: Column(
                 children: [
+
                   const SizedBox(height: 25,),
+
                   const Text("Login",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -49,7 +50,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
+
                   const SizedBox(height: 25,),
+
                    FieldLoginSignup(
                     text: 'email address',
                     iconButton: null,
@@ -60,7 +63,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                       return null;
                   }, obscureText: false,
                   ),
+
                   const SizedBox(height: 12,),
+
                    FieldLoginSignup(
                        obscureText: obscureText,
                     text: 'password',
@@ -71,10 +76,18 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                             obscureText=!obscureText;
                          });
                        },
-                       icon:onpressed? Icon(Icons.visibility,
-                         color: Colors.blue,
-                       ): Icon(Icons.visibility_off,
+                       /*
+                       Icon(Icons.visibility_off,
                          color:Colors.red,
+                       ),
+                        */
+                       icon:
+                       onpressed==true?
+                       Icon(Icons.visibility_off,
+                         color:Colors.red,
+                       ):
+                       Icon(Icons.visibility,
+                         color: Colors.blue,
                        ),
 
                      ),
@@ -89,11 +102,15 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
 
                    },
                    ),
+
                   const SizedBox(height: 15,),
+
                   CustomTextButton(
                     text: 'Forgotten password?',
                     onPressed: () {  },),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: 'Log In',
                     backgroundColor: const Color(0xffFFEFEF),
@@ -107,7 +124,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                        }
                     },
                   ),
+
                   const SizedBox(height: 12,),
+
                   CustomRowAccount(
                     text: "Don’t have an account?",
                     onPressed:(){
@@ -115,9 +134,13 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                     } ,
                     textButton: "sign up" ,
                   ),
+
                   const SizedBox(height: 12,),
+
                   const CustomRowDivider(),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: "Login With Google",
                     backgroundColor: Colors.white,
@@ -125,7 +148,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                     onTap: () { },
                     child: Image.asset(ImageApp.google_icon_Image),
                   ),
+
                   const SizedBox(height: 12,),
+
                   CustomButton(
                     text: "Login With Facebook",
                     backgroundColor:Colors.blueAccent,
@@ -146,7 +171,9 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 20,),
+
                   const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -181,6 +208,7 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                         ),
                       ]
                   )
+
                 ],
               ),
             ),

@@ -1,7 +1,7 @@
 import 'package:cafeflower/cool/imagecore.dart';
 import 'package:flutter/material.dart';
-
 import '../widget/drawer_widget/navbar.dart';
+import '../widget/home_page_widget/home_page_body.dart';
 
 
 
@@ -26,6 +26,7 @@ class HomePageScreen extends StatelessWidget{
         ],
       ),
       drawer: NavBar(),
+      body: CustomHomeBody(),
     );
   }
 
