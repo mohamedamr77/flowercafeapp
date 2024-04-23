@@ -4,10 +4,21 @@ import 'package:flutter/material.dart';
 import 'button.dart';
 import 'divider_or_divider.dart';
 import 'have_account_row.dart';
-class CustomSignUpBody extends StatelessWidget {
+class CustomSignUpBody extends StatefulWidget {
   CustomSignUpBody({super.key});
+
+  @override
+  State<CustomSignUpBody> createState() => _CustomSignUpBodyState();
+}
+
+class _CustomSignUpBodyState extends State<CustomSignUpBody> {
   GlobalKey<FormState> formstate=GlobalKey();
+
   late var checkPassword;
+
+   bool onpressed=false;
+   bool  obscureText=false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +54,9 @@ class CustomSignUpBody extends StatelessWidget {
                   const SizedBox(height: 14,),
                   FieldLoginSignup(
                     text: 'email address',
-                    icon: null,
-                    validator: (value){
+                      iconButton: null,
+                      obscureText: false,
+                     validator: (value){
                       if(value!.isEmpty){
                         return 'Please enter your email';
                       }
@@ -53,8 +65,10 @@ class CustomSignUpBody extends StatelessWidget {
                   ),
                   const SizedBox(height: 12,),
                   FieldLoginSignup(
+                    obscureText: false,
                     text: 'create password',
-                    icon: null, validator: (value ) {
+                    iconButton: null,
+                     validator: (value ) {
                       if(value!.isEmpty){
                         checkPassword=value;
                         return 'Enter password';
@@ -64,8 +78,24 @@ class CustomSignUpBody extends StatelessWidget {
                   ),
                   const SizedBox(height: 15,),
                   FieldLoginSignup(
+                    obscureText: obscureText,
                     text: 'Confirm password',
-                    icon: Icon(Icons.remove_red_eye), validator: (value) {
+                    iconButton: IconButton(
+                      onPressed: () {
+                       setState(() {
+                         onpressed=!onpressed;
+                         obscureText=!obscureText;
+                       });
+                      },
+
+                      icon:onpressed? Icon(Icons.visibility_off,
+                        color:Colors.red,
+                      ):  Icon(Icons.visibility,
+                        color: Colors.blue,
+                      ),
+
+                    ),
+                    validator: (value) {
                     if(value!.isEmpty){
                       return "Enter password";
                     }

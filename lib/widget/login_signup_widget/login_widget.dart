@@ -15,6 +15,8 @@ class CustomLoginBody extends StatefulWidget{
 
 class _CustomLoginBodyState extends State<CustomLoginBody> {
   GlobalKey<FormState> formstate=GlobalKey();
+   bool onpressed=false;
+   bool obscureText=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,18 +52,33 @@ class _CustomLoginBodyState extends State<CustomLoginBody> {
                   const SizedBox(height: 25,),
                    FieldLoginSignup(
                     text: 'email address',
-                    icon: null,
+                    iconButton: null,
                   validator: (value){
                       if(value!.isEmpty){
                         return 'Please enter your email';
                       }
                       return null;
-                  },
+                  }, obscureText: false,
                   ),
                   const SizedBox(height: 12,),
                    FieldLoginSignup(
+                       obscureText: obscureText,
                     text: 'password',
-                    icon: Icon(Icons.remove_red_eye), validator: (value) {
+                     iconButton: IconButton(
+                       onPressed: () {
+                         setState(() {
+                           onpressed=!onpressed;
+                            obscureText=!obscureText;
+                         });
+                       },
+                       icon:onpressed? Icon(Icons.visibility,
+                         color: Colors.blue,
+                       ): Icon(Icons.visibility_off,
+                         color:Colors.red,
+                       ),
+
+                     ),
+                     validator: (value) {
                       if(value!.isEmpty){
                         return "Please enter your password";
                       }

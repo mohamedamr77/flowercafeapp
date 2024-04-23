@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 
 class  FieldLoginSignup extends StatelessWidget{
   final String? text;
-  final Icon? icon;
+  final Widget? iconButton;
   String? Function(String?)? validator;
-   FieldLoginSignup({super.key,required this.text,required this.icon,required this.validator});
+    bool obscureText;
+   FieldLoginSignup({super.key,required this.text,required this.iconButton,required this.validator,required this.obscureText});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
            validator:validator ,
           decoration: InputDecoration(
           filled: true,
           hintText: text,
-          suffixIcon: icon,
+          suffixIcon: iconButton,
           hintStyle: const TextStyle(
           fontSize: 15.0, // Adjust the font size as needed
           fontWeight: FontWeight.w400,
