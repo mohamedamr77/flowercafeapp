@@ -18,7 +18,7 @@ class CustomSplachScreenBody extends StatelessWidget{
      child: Column(
        mainAxisAlignment: MainAxisAlignment.center,
        children: [
-         ZoomIn(
+         Roulette(
            child: Center(
              child: Image.asset(ImageApp.splacScreen_logo_Image,
                height: 125 ,

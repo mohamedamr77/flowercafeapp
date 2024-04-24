@@ -22,6 +22,14 @@ class MilkshakeScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios,
+            color: ColorApp.basic_color,
+          ),
+          onPressed: (){
+            Navigator.pop(context);
+          },
+        ),
         actions: [
           Image(image: AssetImage(ImageApp.bestSelling_icon_Image))
         ],

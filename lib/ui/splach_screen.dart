@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(
-        seconds: 2
+        seconds: 3
     ), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) {
         return   CustomOnBoardingBody();

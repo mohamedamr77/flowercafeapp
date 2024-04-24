@@ -26,4 +26,7 @@ class ImageApp{
   static const String oreoMilkshake_Image="assets/images/Oreo Milkshake.png";
   static const String mangoMilkshake_Image="assets/images/Mango Milkshake.png";
   static const String chocolateMilkshake_Image="assets/images/Chocolate Milkshake.png";
+
+  static const String   Iconapp_Image="assets/images/mobilecafe.jpg";
+
 }
