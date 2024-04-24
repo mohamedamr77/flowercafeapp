@@ -4,6 +4,8 @@ import '../../cool/colorcore.dart';
 import '../../cool/imagecore.dart';
 import '../../model_varibale/best_selling/bestselling_model.dart';
 class FacvouritePageBody extends StatefulWidget{
+
+  const FacvouritePageBody({super.key});
   @override
   State<FacvouritePageBody> createState() => _FacvouritePageBodyState();
 }

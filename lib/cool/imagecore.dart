@@ -19,4 +19,6 @@ class ImageApp{
 
   static const String   donuts_Image="assets/images/Donuts.png";
   static const String   pieceOfCake_Image="assets/images/Piece of cake.png";
+
+  static const String   bestSelling_icon_Image="assets/images/bestselling_icon.png";
 }

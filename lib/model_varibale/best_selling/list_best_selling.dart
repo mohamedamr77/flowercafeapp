@@ -17,4 +17,65 @@ List<BestSellinModel> bestSellingList=[
     flavor: "Chocolate",
     price: 80,
   ),
+  BestSellinModel(
+    image: ImageApp.donuts_Image,
+    nameProduct: "Donuts",
+    flavor: "Creamy",
+    price: 45,
+  ),
+  BestSellinModel(
+    image: ImageApp.pieceOfCake_Image,
+    nameProduct: "Piece of cake",
+    flavor: "Chocolate",
+    price: 80,
+  ),
+  BestSellinModel(
+    image: ImageApp.donuts_Image,
+    nameProduct: "Donuts",
+    flavor: "Creamy",
+    price: 45,
+  ),
+  BestSellinModel(
+    image: ImageApp.pieceOfCake_Image,
+    nameProduct: "Piece of cake",
+    flavor: "Chocolate",
+    price: 80,
+  ),
+  BestSellinModel(
+    image: ImageApp.donuts_Image,
+    nameProduct: "Donuts",
+    flavor: "Creamy",
+    price: 45,
+  ),
+  BestSellinModel(
+    image: ImageApp.pieceOfCake_Image,
+    nameProduct: "Piece of cake",
+    flavor: "Chocolate",
+    price: 80,
+  ),
+  BestSellinModel(
+    image: ImageApp.donuts_Image,
+    nameProduct: "Donuts",
+    flavor: "Creamy",
+    price: 45,
+  ),
+  BestSellinModel(
+    image: ImageApp.pieceOfCake_Image,
+    nameProduct: "Piece of cake",
+    flavor: "Chocolate",
+    price: 80,
+  ),
+  BestSellinModel(
+    image: ImageApp.donuts_Image,
+    nameProduct: "Donuts",
+    flavor: "Creamy",
+    price: 45,
+  ),
+  BestSellinModel(
+    image: ImageApp.pieceOfCake_Image,
+    nameProduct: "Piece of cake",
+    flavor: "Chocolate",
+    price: 80,
+  ),
+
 ];

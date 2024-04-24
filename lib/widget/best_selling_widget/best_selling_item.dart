@@ -5,7 +5,6 @@ import '../../model_varibale/best_selling/list_best_selling.dart';
 class CustomBestSellingItem extends StatefulWidget {
   int index;
    CustomBestSellingItem({super.key,required this.index});
-
   @override
   State<CustomBestSellingItem> createState() => _CustomBestSellingItemState();
 }

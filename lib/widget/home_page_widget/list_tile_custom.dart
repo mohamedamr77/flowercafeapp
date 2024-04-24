@@ -4,8 +4,8 @@ import '../../cool/colorcore.dart';
 
 class CustomListtile  extends StatelessWidget{
   String text;
-
-  CustomListtile({super.key,required this.text});
+  Function()? onTap;
+  CustomListtile({super.key,required this.text,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CustomListtile  extends StatelessWidget{
         ),
       ),
       trailing: GestureDetector(
-        onTap: (){},
+        onTap: onTap,
         child: Container(
           width: 70,
           height: 15,
