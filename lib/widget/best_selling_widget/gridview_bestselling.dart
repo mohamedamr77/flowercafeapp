@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import '../../model_varibale/best_selling/list_best_selling.dart';
 import 'best_selling_item.dart';
 

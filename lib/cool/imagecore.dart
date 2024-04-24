@@ -21,4 +21,9 @@ class ImageApp{
   static const String   pieceOfCake_Image="assets/images/Piece of cake.png";
 
   static const String   bestSelling_icon_Image="assets/images/bestselling_icon.png";
+
+  static const String vanillaMillkshake_Image="assets/images/Vanilla Milkshake.png";
+  static const String oreoMilkshake_Image="assets/images/Oreo Milkshake.png";
+  static const String mangoMilkshake_Image="assets/images/Mango Milkshake.png";
+  static const String chocolateMilkshake_Image="assets/images/Chocolate Milkshake.png";
 }

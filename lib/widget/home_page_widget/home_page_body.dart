@@ -4,6 +4,7 @@ import 'package:cafeflower/widget/home_page_widget/banner_widget.dart';
 import 'package:cafeflower/widget/home_page_widget/search.dart';
 import 'package:flutter/material.dart';
 import '../../ui/bestselling_screen.dart';
+import '../../ui/milkshake_screen.dart';
 import '../best_selling_widget/best_selling_item.dart';
 import '../best_selling_widget/gridview_bestselling.dart';
 import 'list_tile_custom.dart';
@@ -19,7 +20,9 @@ class CustomHomePageBody extends StatelessWidget {
           SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: "Choose What Suits Your Test")),
           SliverToBoxAdapter(child: const   SizedBox(height: 5,)),
           SliverToBoxAdapter(child: CustomSearch()),
-          SliverToBoxAdapter(child: CustomListtile(text: 'Discover by category',onTap: null)),
+          SliverToBoxAdapter(child: CustomListtile(text: 'Discover by category',
+              onTap:() => Navigator.push(context, MaterialPageRoute(builder: (context) => MilkshakeScreen(),)),
+          )),
           SliverToBoxAdapter(child: CustomListViewCategory()),
           SliverToBoxAdapter(child: const  SizedBox(height: 5,)),
           SliverToBoxAdapter(
@@ -36,7 +39,7 @@ class CustomHomePageBody extends StatelessWidget {
         crossAxisCount: 2, // Number of items per row
         crossAxisSpacing: 8,
          mainAxisSpacing: 10,// Spacing between items horizontally
-        childAspectRatio: 0.9, // Aspect ratio of items (square in this case)
+        childAspectRatio: 0.98, // Aspect ratio of items (square in this case)
       ),
        itemBuilder: (context, index) => CustomBestSellingItem(index: index),
              itemCount: bestSellingList.length,
