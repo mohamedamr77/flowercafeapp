@@ -26,7 +26,7 @@ class CustomSearch extends StatelessWidget{
 
           ),
         ),
-        SizedBox(width: 12,),
+        SizedBox(width: MediaQuery.of(context).size.width*0.03,),
         ClipRRect(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0),

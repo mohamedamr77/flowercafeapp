@@ -6,13 +6,13 @@ class CustomListViewCategory extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 88,
+      height: MediaQuery.of(context).size.width*0.241,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => CategoryItem(
           index: index,
         ),
-        itemCount: categoryList.length, separatorBuilder: (BuildContext context, int index) => SizedBox(width: 19,),
+        itemCount: categoryList.length, separatorBuilder: (BuildContext context, int index) => SizedBox(width: MediaQuery.of(context).size.width*0.041,),
       ),
     );
   }

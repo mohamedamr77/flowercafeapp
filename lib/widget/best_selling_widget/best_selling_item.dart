@@ -15,8 +15,8 @@ class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
     return   Stack(
       children: [
         Container(
-          height: 167,
-          width: 153,
+          height: MediaQuery.of(context).size.height*0.22,
+          width: MediaQuery.of(context).size.width*0.42,
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   colors: [
@@ -33,14 +33,13 @@ class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
               )
           ),
         ),
+
         Positioned(
           left: 8,
-          right:28 ,
+          right:30 ,
           top:9 ,
           bottom: 81,
           child: Image(
-            height: 78,
-            width: 117,
             image: AssetImage(bestSellingList[widget.index].image),
           ),
         ),

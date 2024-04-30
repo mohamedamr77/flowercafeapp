@@ -20,8 +20,8 @@ class CustomListtile  extends StatelessWidget{
       trailing: GestureDetector(
         onTap: onTap,
         child: Container(
-          width: 70,
-          height: 15,
+          width: MediaQuery.of(context).size.width*0.2,
+          height: MediaQuery.of(context).size.height*0.02,
           child: Row(
             children: [
               FittedBox(
@@ -33,7 +33,7 @@ class CustomListtile  extends StatelessWidget{
                   ),
                 ),
               ),
-              SizedBox(width: 3,),
+              SizedBox(width: MediaQuery.of(context).size.width*0.01,),
               Image(image: AssetImage("assets/images/Arrow---Right.png")),
             ],
           ),
