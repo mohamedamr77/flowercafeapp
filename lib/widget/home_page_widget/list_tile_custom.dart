@@ -1,6 +1,5 @@
 import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
-
 import '../../cool/colorcore.dart';
 
 class CustomListtile  extends StatelessWidget{
@@ -35,7 +34,7 @@ class CustomListtile  extends StatelessWidget{
                 ),
               ),
               SizedBox(width: 3,),
-              //Image(image: AssetImage("assets/images/Arrow---Right.png")),
+              Image(image: AssetImage("assets/images/Arrow---Right.png")),
             ],
           ),
         ),

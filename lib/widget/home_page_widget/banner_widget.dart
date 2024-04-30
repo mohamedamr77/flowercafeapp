@@ -13,6 +13,8 @@ class CustomBanner extends StatelessWidget{
       children: [
         Image(image: AssetImage(image),
           fit: BoxFit.fitWidth,
+          width: double.infinity,
+          height: MediaQuery.of(context).size.height*0.26,
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width*0.4,

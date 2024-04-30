@@ -15,11 +15,14 @@ class CustomHomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.all(12),
+      padding:  EdgeInsets.symmetric(
+        horizontal:MediaQuery.of(context).size.width*0.03 ,
+        vertical:MediaQuery.of(context).size.height*0.03  ,
+      ),
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: AppText.chooseSuitsText)),
-          SliverToBoxAdapter(child: const   SizedBox(height: 5,)),
+          SliverToBoxAdapter(child: const   SizedBox(height: 9,)),
           SliverToBoxAdapter(child: CustomSearch()),
           SliverToBoxAdapter(
               child: CustomListtile(
@@ -36,18 +39,28 @@ class CustomHomePageBody extends StatelessWidget {
                 }
             ),
           ),
-           SliverGrid.builder(
-       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2, // Number of items per row
-        crossAxisSpacing: 8,
-         mainAxisSpacing: 10,// Spacing between items horizontally
-        childAspectRatio: 0.98, // Aspect ratio of items (square in this case)
-      ),
-       itemBuilder: (context, index) => CustomBestSellingItem(index: index),
-             itemCount: bestSellingList.length,
-    ),
+           SliverToBoxAdapter(
+             child: SizedBox(
+               height: 170,
+               child: ListView.separated(
+                 scrollDirection: Axis.horizontal,
+                 itemBuilder: (context, index) => CustomBestSellingItem(index: index),
+                 separatorBuilder: (BuildContext context, int index) {
+                 return SizedBox(
+                     width: 10,
+                 );
+                 },
+                 itemCount: bestSellingList.length,),
+             ),
+           )
     ]
     ),
     );
   }
 }
+
+
+/*
+itemBuilder: (context, index) => CustomBestSellingItem(index: index),
+             itemCount: bestSellingList.length,
+ */
