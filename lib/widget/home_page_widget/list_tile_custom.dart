@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
 
 import '../../cool/colorcore.dart';
@@ -25,7 +26,7 @@ class CustomListtile  extends StatelessWidget{
           child: Row(
             children: [
               FittedBox(
-                child: Text("See All",
+                child: Text(AppText.seeAllText,
                   style: TextStyle(
                     color: Color(0xffD1A39D),
                     fontSize: 16,

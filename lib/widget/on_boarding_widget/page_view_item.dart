@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/textcore.dart';
 import 'package:cafeflower/model_varibale/page_view/list_pageview.dart';
 import 'package:cafeflower/ui/home_page_Screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -63,8 +64,8 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
           }, child:
         Text(
           widget.index==pageViewModelList.length-1?
-          "Get started":
-          "Next"
+          AppText.getStratedText:
+          AppText.nextText
           ,),
           style: ElevatedButton.styleFrom(
               backgroundColor: ColorApp.basic_color,

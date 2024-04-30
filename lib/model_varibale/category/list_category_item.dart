@@ -1,28 +1,28 @@
 import 'package:cafeflower/cool/imagecore.dart';
+import 'package:cafeflower/cool/textcore.dart';
 
 import 'category_model.dart';
 
 List<CategoryModel> categoryList=[
   CategoryModel(
       image: ImageApp.milkshake_Drinks_Image,
-      name: "Milkshake"
+      name: AppText.milkShakeText
   ),
 
   CategoryModel(
       image: ImageApp.floreitamin_Drinks_Image,
-      name: "Flore vitamin"
+      name: AppText.floreVitaminText
   ),
 
   CategoryModel(
       image: ImageApp.spanishLatte_Drinks_Image,
-      name: "Spanish latte"
+      name: AppText.spanishLatteText
   ),
 
 
   CategoryModel(
       image: ImageApp.chocolated_Drinks_Image,
-      name: "Chocolate drinks"
+      name: AppText.chocolateDrinksText
   ),
-
 
 ];

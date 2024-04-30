@@ -1,4 +1,5 @@
 import 'package:cafeflower/cool/imagecore.dart';
+import 'package:cafeflower/cool/textcore.dart';
 import 'package:cafeflower/model_varibale/best_selling/list_best_selling.dart';
 import 'package:cafeflower/widget/home_page_widget/banner_widget.dart';
 import 'package:cafeflower/widget/home_page_widget/search.dart';
@@ -17,24 +18,25 @@ class CustomHomePageBody extends StatelessWidget {
       padding:  EdgeInsets.all(12),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: "Choose What Suits Your Test")),
+          SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: AppText.chooseSuitsText)),
           SliverToBoxAdapter(child: const   SizedBox(height: 5,)),
           SliverToBoxAdapter(child: CustomSearch()),
-          SliverToBoxAdapter(child: CustomListtile(text: 'Discover by category',
-              onTap:() => Navigator.push(context, MaterialPageRoute(builder: (context) => MilkshakeScreen(),)),
+          SliverToBoxAdapter(
+              child: CustomListtile(
+                text: AppText.discoverCategoryText,
+                onTap:() => Navigator.push(context, MaterialPageRoute(builder: (context) => MilkshakeScreen(),)),
           )),
           SliverToBoxAdapter(child: CustomListViewCategory()),
           SliverToBoxAdapter(child: const  SizedBox(height: 5,)),
           SliverToBoxAdapter(
             child: CustomListtile(
-                text: 'Best selling',
+                text: AppText.bestSellingText,
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) =>  BestSellingScreen()));
                 }
             ),
           ),
            SliverGrid.builder(
-
        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, // Number of items per row
         crossAxisSpacing: 8,
