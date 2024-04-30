@@ -35,7 +35,7 @@ class CustomListtile  extends StatelessWidget{
                 ),
               ),
               SizedBox(width: 3,),
-              Image(image: AssetImage("assets/images/Arrow---Right.png")),
+              //Image(image: AssetImage("assets/images/Arrow---Right.png")),
             ],
           ),
         ),
