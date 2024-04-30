@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../model_varibale/category/list_category_item.dart';
+import '../../model_varibale/category/discover_category/list_discover_category.dart';
 import 'category_item.dart';
 
 class CustomListViewCategory extends StatelessWidget{
@@ -12,7 +12,7 @@ class CustomListViewCategory extends StatelessWidget{
         itemBuilder: (context, index) => CategoryItem(
           index: index,
         ),
-        itemCount: categoryList.length, separatorBuilder: (BuildContext context, int index) => SizedBox(width: MediaQuery.of(context).size.width*0.041,),
+        itemCount: discoverCategoryList.length, separatorBuilder: (BuildContext context, int index) => SizedBox(width: MediaQuery.of(context).size.width*0.041,),
       ),
     );
   }
