@@ -70,7 +70,6 @@ class _FacvouritePageBodyState extends State<FacvouritePageBody> {
                     child:  Icon(Icons.favorite,
                       color:ColorApp.basic_color,
                     ),
-
                   ),
                 ),
               ),

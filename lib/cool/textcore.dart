@@ -27,4 +27,9 @@ class AppText{
    static const String mangoMilkshakeText="Mango Milkshake";
    static const String StrawberryMilkshakeText="Strawberry Milkshake";
    static const String vanillaMilkshakeText="Vanilla Milkshake";
+
+   static const String describtionText="There are many variations of passages of Lorem Ipsum available, he majority have There are many variations of passages of Lorem Ipsum available, he majority have";
+
+
 }
+
