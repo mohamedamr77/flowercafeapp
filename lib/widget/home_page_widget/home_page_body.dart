@@ -19,6 +19,7 @@ class CustomHomePageBody extends StatelessWidget {
         vertical:MediaQuery.of(context).size.height*0.01  ,
       ),
       child: CustomScrollView(
+        physics: NeverScrollableScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: AppText.chooseSuitsText)), //done
           SliverToBoxAdapter(child:    SizedBox(height: MediaQuery.of(context).size.height*0.022,)), //done
@@ -40,7 +41,7 @@ class CustomHomePageBody extends StatelessWidget {
           ), //done
            SliverToBoxAdapter(
              child: SizedBox(
-               height: MediaQuery.of(context).size.height*0.23,
+               height: MediaQuery.of(context).size.height*0.22,
                child: ListView.separated(
                  scrollDirection: Axis.horizontal,
                  itemBuilder: (context, index) => CustomBestSellingItem(index: index),
@@ -49,7 +50,7 @@ class CustomHomePageBody extends StatelessWidget {
                  },
                  itemCount: bestSellingList.length,),
              ),
-           )
+           ),
     ]
     ),
     );

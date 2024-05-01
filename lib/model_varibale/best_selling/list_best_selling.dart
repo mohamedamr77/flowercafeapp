@@ -7,7 +7,7 @@ import 'bestselling_model.dart';
 
 List<BestSellinModel> bestSellingList=[
   BestSellinModel(
-      image: "assets/images/mobilecafe.jpg",
+      image:ImageApp.donuts_Image,
       nameProduct: AppText.donatsText,
       flavor: "Creamy",
       price: 45,
