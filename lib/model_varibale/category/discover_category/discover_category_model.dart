@@ -1,7 +1,7 @@
-class CategoryModel{
+class DiscoverCategoryModel{
   final String image;
   final String name;
-  CategoryModel({
+  DiscoverCategoryModel({
     required this.image,
     required this.name
 }

@@ -1,5 +1,5 @@
+import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
-
 import '../../cool/colorcore.dart';
 
 class CustomListtile  extends StatelessWidget{
@@ -20,12 +20,12 @@ class CustomListtile  extends StatelessWidget{
       trailing: GestureDetector(
         onTap: onTap,
         child: Container(
-          width: 70,
-          height: 15,
+          width: MediaQuery.of(context).size.width*0.2,
+          height: MediaQuery.of(context).size.height*0.02,
           child: Row(
             children: [
               FittedBox(
-                child: Text("See All",
+                child: Text(AppText.seeAllText,
                   style: TextStyle(
                     color: Color(0xffD1A39D),
                     fontSize: 16,
@@ -33,7 +33,7 @@ class CustomListtile  extends StatelessWidget{
                   ),
                 ),
               ),
-              SizedBox(width: 3,),
+              SizedBox(width: MediaQuery.of(context).size.width*0.01,),
               Image(image: AssetImage("assets/images/Arrow---Right.png")),
             ],
           ),

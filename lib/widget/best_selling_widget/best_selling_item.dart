@@ -13,10 +13,12 @@ class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
   @override
   Widget build(BuildContext context) {
     return   Stack(
+      alignment: Alignment.bottomRight,
       children: [
         Container(
-          height: 167,
-          width: 153,
+          padding: EdgeInsets.all(10),
+          height: MediaQuery.of(context).size.height*0.22,
+          width: MediaQuery.of(context).size.width*0.42,
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   colors: [
@@ -32,21 +34,45 @@ class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
                 color: ColorApp.border_container_bestselling_color,
               )
           ),
-        ),
-        Positioned(
-          left: 8,
-          right:28 ,
-          top:9 ,
-          bottom: 81,
-          child: Image(
-            height: 78,
-            width: 117,
-            image: AssetImage(bestSellingList[widget.index].image),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image(
+                image: AssetImage(bestSellingList[widget.index].image),
+                width: MediaQuery.of(context).size.width*0.3,
+                height: MediaQuery.of(context).size.height*0.1,
+              ),
+              SizedBox(height: 10,),
+              Text(bestSellingList[widget.index].nameProduct,
+                style: TextStyle(
+                  color: ColorApp.basic_color,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(height: 4,),
+              Text("Flavor : ${bestSellingList[widget.index].flavor}",
+                style: TextStyle(
+                  color: ColorApp.flavor_color,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(height: 5,),
+              Text("${bestSellingList[widget.index].price} LE",
+                style: TextStyle(
+                  color: ColorApp.basic_color,
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
         Positioned(
           right: 3,
-          top: 4,
+          top: 9,
           child: CircleAvatar(
             backgroundColor: ColorApp.white_color ,
             child: Center(
@@ -63,40 +89,18 @@ class _CustomBestSellingItemState extends State<CustomBestSellingItem> {
             ),
           ),
         ),
-        Positioned(
-          top: 100,
-          bottom: 52,
-          left: 8,
-          child: Text(bestSellingList[widget.index].nameProduct,
-            style: TextStyle(
-              color: ColorApp.basic_color,
-              fontSize: 13,
-              fontWeight: FontWeight.w500,
-            ),
+        Container(
+          width: 28.21,
+          height: 29.24,
+          decoration: BoxDecoration(
+            color: Color(0xff3C312F),
+            borderRadius: BorderRadius.only(
+              topLeft:Radius.circular(3) ,
+              bottomRight:Radius.circular(20) ,
+            )
           ),
-        ),
-        Positioned(
-          top: 118,
-          bottom: 34,
-          left: 8,
-          child: Text("Flavor : ${bestSellingList[widget.index].flavor}",
-            style: TextStyle(
-              color: ColorApp.flavor_color,
-              fontSize: 13,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
-        Positioned(
-          top: 142,
-          bottom: 10,
-          left: 12,
-          child: Text("${bestSellingList[widget.index].price} LE",
-            style: TextStyle(
-              color: ColorApp.basic_color,
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-            ),
+          child: Icon(Icons.add,
+          color: Colors.white,
           ),
         ),
       ],

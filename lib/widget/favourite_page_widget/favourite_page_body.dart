@@ -25,6 +25,14 @@ class _FacvouritePageBodyState extends State<FacvouritePageBody> {
           height: 43,
           width: 80,
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios,
+            color: ColorApp.basic_color,
+          ),
+          onPressed: (){
+            Navigator.pop(context);
+          },
+        ),
         actions: [
           IconButton(onPressed: (){}, icon:Icon(
             Icons.favorite_outlined,
@@ -62,7 +70,6 @@ class _FacvouritePageBodyState extends State<FacvouritePageBody> {
                     child:  Icon(Icons.favorite,
                       color:ColorApp.basic_color,
                     ),
-
                   ),
                 ),
               ),
