@@ -33,17 +33,7 @@ class CustomHomePageBody extends StatelessWidget {
                 }
             ),
           ),
-           SliverGrid.builder(
 
-       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2, // Number of items per row
-        crossAxisSpacing: 8,
-         mainAxisSpacing: 10,// Spacing between items horizontally
-        childAspectRatio: 0.98, // Aspect ratio of items (square in this case)
-      ),
-       itemBuilder: (context, index) => CustomBestSellingItem(index: index),
-             itemCount: bestSellingList.length,
-    ),
     ]
     ),
     );
