@@ -98,7 +98,8 @@ List<CategoryDetailsModel> categoryDetails=[
       ),
     ],
   ),
-  CategoryDetailsModel(
+
+CategoryDetailsModel(
     title: AppText.spanishLatteText,
     items: [
       ItemModel(
@@ -174,4 +175,6 @@ List<CategoryDetailsModel> categoryDetails=[
       ),
     ],
   ),
+
+
 ];

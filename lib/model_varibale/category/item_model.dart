@@ -3,6 +3,7 @@ class ItemModel{
   final String nameProduct;
   final String describtion;
   final double price;
+    bool addCart;
     int count;
   ItemModel({
     required this.image,
@@ -10,6 +11,7 @@ class ItemModel{
     required this.describtion,
     required this.price,
          this.count=0,
+          this.addCart=false,
   });
 }
 

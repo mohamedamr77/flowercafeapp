@@ -86,7 +86,6 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                         )
                       ],
                     ),
-
                     SizedBox(height: MediaQuery.of(context).size.height*0.03,),
                     Text("${widget.item.describtion}",
                     style: TextStyle(
@@ -119,11 +118,12 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FloatingActionButton(onPressed: (){
-                               setState(() {
-                                 if(widget.item.count>=0){
-                                   widget.item.count=  widget.item.count-1;
-                                 }
-                               });
+                                          setState(() {
+                                            if(widget.item.count>0){
+                                              widget.item.count--;
+                                            }
+                                          });
+
                             },
                                 backgroundColor: Color(0xff3C312F),
                                 elevation: 0,
@@ -148,9 +148,7 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                               onTap: (){
                                 setState(() {
                                   widget.item.count++;
-                                  }
-
-                                );
+                                  });
                               },
                               child: CircleAvatar(
                                 radius: 15,
@@ -200,7 +198,15 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                     SizedBox(height: MediaQuery.of(context).size.height*0.04,),
                     GestureDetector(
                        onTap: (){
-                         Navigator.push(context, MaterialPageRoute(builder: (context) => CartBody(),));
+                         widget.item.addCart=true;
+
+                         Navigator.push
+                           (
+                             context, MaterialPageRoute(builder: (context) => CartBody(),
+                         )
+                         ).then((value) {setState(() {
+                           });});
+
                        },
                       child: Container(
                         width: double.infinity,
