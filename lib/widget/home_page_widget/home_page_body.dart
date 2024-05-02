@@ -41,6 +41,7 @@ class CustomHomePageBody extends StatelessWidget {
           ), //done
            SliverToBoxAdapter(
              child: SizedBox(
+
                height: MediaQuery.of(context).size.height*0.22,
                child: ListView.separated(
                  scrollDirection: Axis.horizontal,
