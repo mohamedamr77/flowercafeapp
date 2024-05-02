@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
 
 import '../../cool/colorcore.dart';
@@ -10,7 +11,7 @@ class CustomSearch extends StatelessWidget{
         Expanded(
           child: TextFormField(
             decoration: InputDecoration(
-              hintText: "search here ..",
+              hintText: AppText.seacrhformFieldText,
               hintStyle: TextStyle(
                 color: Color(0xff3C312F4D).withOpacity(0.6),
                 fontSize: 13,
@@ -25,7 +26,7 @@ class CustomSearch extends StatelessWidget{
 
           ),
         ),
-        SizedBox(width: 12,),
+        SizedBox(width: MediaQuery.of(context).size.width*0.03,),
         ClipRRect(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0),
