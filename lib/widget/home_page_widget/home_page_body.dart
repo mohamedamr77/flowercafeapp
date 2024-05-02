@@ -41,7 +41,6 @@ class CustomHomePageBody extends StatelessWidget {
           ), //done
            SliverToBoxAdapter(
              child: SizedBox(
-
                height: MediaQuery.of(context).size.height*0.22,
                child: ListView.separated(
                  scrollDirection: Axis.horizontal,
@@ -60,6 +59,15 @@ class CustomHomePageBody extends StatelessWidget {
 
 
 /*
-itemBuilder: (context, index) => CustomBestSellingItem(index: index),
+ SliverGrid.builder(
+       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2, // Number of items per row
+        crossAxisSpacing: 8,
+         mainAxisSpacing: 10,// Spacing between items horizontally
+        childAspectRatio: 0.98, // Aspect ratio of items (square in this case)
+      ),
+       itemBuilder: (context, index) => CustomBestSellingItem(index: index),
              itemCount: bestSellingList.length,
+    ),
+
  */
