@@ -18,11 +18,11 @@ class CustomSplachScreenBody extends StatelessWidget{
      child: Column(
        mainAxisAlignment: MainAxisAlignment.center,
        children: [
-         Roulette(
+         FadeInUp(
            child: Center(
              child: Image.asset(ImageApp.splacScreen_logo_Image,
-               height: 125 ,
-               width: 159,
+               height: MediaQuery.of(context).size.height*0.8 ,
+               width: MediaQuery.of(context).size.width*0.9,
              ),
            ),
          ),

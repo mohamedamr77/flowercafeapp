@@ -25,16 +25,15 @@ class NavBar extends StatelessWidget {
             ),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/images/dividerBgAppBar.jpg"),
+                image: AssetImage("assets/images/cafe_images/dividerBgAppBar.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           const Card(
             child: ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text("Account"),
-
+              leading: Icon(Icons.shopping_cart_outlined),
+              title: Text("Orders"),
             ),
           ),
           Card(
@@ -49,11 +48,8 @@ class NavBar extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder:(context) => CustomSignUpScreen(),));
-              },
-              leading: const Icon(Icons.person_add),
-              title: const Text("Sign up"),
+              leading: const Icon(Icons.qr_code),
+              title: const Text("Promo Code"),
 
             ),
           ),
@@ -69,8 +65,8 @@ class NavBar extends StatelessWidget {
           ),
           const Card(
             child: ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("settings"),
+              leading: Icon(Icons.help),
+              title: Text("Help"),
             ),
           ),
         ],

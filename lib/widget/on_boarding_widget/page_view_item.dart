@@ -22,12 +22,15 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
       children: [
         SizedBox(
           height: widget.index == 0
-              ? MediaQuery.of(context).size.height * 0.386
+              ? MediaQuery.of(context).size.height * 0.33
               : widget.index == 1
-              ? MediaQuery.of(context).size.height * 0.29
-              : MediaQuery.of(context).size.height * 0.21,
+              ? MediaQuery.of(context).size.height * 0.328
+              : MediaQuery.of(context).size.height * 0.33,
         ),
-        Image(image: AssetImage(pageViewModelList[widget.index].image)),
+        Image(image: AssetImage(pageViewModelList[widget.index].image),
+        width: double.infinity,
+          height: 250,
+        ),
         SizedBox(height: 10),
         Text(
           pageViewModelList[widget.index].nameProduct,
@@ -51,8 +54,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
             ),
           ),
         ),
-        SizedBox(height: 70),
-
+        SizedBox(height: 10),
         ElevatedButton(
           onPressed: () {
             setState(() {
@@ -96,7 +98,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
               pageViewModelList.length,
                   (index) => Container(
                 margin: EdgeInsets.only(right: 5),
-                width: VariableApp.currentIndex == index ? 25 : 10,
+                width: VariableApp.currentIndex == widget.index ? 25 : 10,
                 height: 10,
                 decoration: BoxDecoration(
                   color: VariableApp.currentIndex == index

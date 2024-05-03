@@ -8,7 +8,7 @@ class BestSellinModel{
  {
    required this.image,
    required this.nameProduct,
-   required this.flavor,
+    this.flavor="null",
    required this.price,
    this.fav=false,
  }

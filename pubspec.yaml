@@ -69,7 +69,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/images/homepage_above.png
+    - assets/images/cafe_images/
+    - assets/images/supermarket_images/unsblach/
+    - assets/images/supermarket_images/onboarding/
+    - assets/images/supermarket_images/bestitems/
+    - assets/images/supermarket_images/category/
+    - assets/images/supermarket_images/fruits/
+    - assets/images/supermarket_images/vegetables/
+    - assets/images/supermarket_images/food/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -95,6 +102,14 @@ flutter:
      - family: Pangolin
        fonts:
          - asset: assets/fonts/Pangolin.ttf
+
+     - family: RozhaOne
+       fonts:
+         - asset: assets/fonts/RozhaOne.ttf
+
+     - family: Sarala
+       fonts:
+         - asset: assets/fonts/Sarala.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

@@ -5,24 +5,24 @@ import 'discover_category_model.dart';
 
 List<DiscoverCategoryModel> discoverCategoryList=[
   DiscoverCategoryModel(
-      image: ImageApp.milkshake_Drinks_Image,
-      name: AppText.milkShakeText
+      image: "assets/images/supermarket_images/fruits/Type=Fruits, Icon=Grape.png",
+      name: AppText.fruits_Text
   ),
 
   DiscoverCategoryModel(
-      image: ImageApp.floreitamin_Drinks_Image,
-      name: AppText.floreVitaminText
+      image: "assets/images/supermarket_images/vegetables/Type=Vegetables, Icon=Tomato (1).png",
+      name: AppText.vegetables_Text,
   ),
 
   DiscoverCategoryModel(
       image: ImageApp.spanishLatte_Drinks_Image,
-      name: AppText.spanishLatteText
+      name: AppText.drinks_Text
   ),
 
 
   DiscoverCategoryModel(
-      image: ImageApp.chocolated_Drinks_Image,
-      name: AppText.chocolateDrinksText
+      image: "assets/images/supermarket_images/category/chesse.png",
+      name: AppText.food_Text,
   ),
 
 ];

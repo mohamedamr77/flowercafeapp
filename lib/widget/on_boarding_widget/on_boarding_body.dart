@@ -29,37 +29,76 @@ class _CustomOnBoardingBodyState extends State<CustomOnBoardingBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              VariableApp.currentIndex == 0
-                  ? ImageApp.onBoarding_1_ScreenImage
-                  : VariableApp.currentIndex == 1
-                  ? ImageApp.onBoarding_2_ScreenImage
-                  : ImageApp.onBoarding_3_ScreenImage,
+      body: Stack(
+        children: [
+          Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                VariableApp.currentIndex == 0
+                    ? ImageApp.onBoarding_1_ScreenImage
+                    : VariableApp.currentIndex == 1
+                    ? ImageApp.onBoarding_2_ScreenImage
+                    : ImageApp.onBoarding_3_ScreenImage,
+              ),
+              fit: BoxFit.cover,
             ),
-            fit: BoxFit.cover,
+          ),
+          child: PageView.builder(
+            controller: _controller,
+            physics: BouncingScrollPhysics(),
+            itemBuilder: (context, index) {
+              return CustomPageViewItem(
+                controller: _controller,
+                index: index,
+              );
+            },
+            itemCount: pageViewModelList.length,
+            onPageChanged: (index) {
+              setState(() {
+                VariableApp.currentIndex = index;
+                // Update the background image based on the current index
+                _updateBackgroundImage();
+              });
+            },
           ),
         ),
-        child: PageView.builder(
-          controller: _controller,
-          physics: BouncingScrollPhysics(),
-          itemBuilder: (context, index) {
-            return CustomPageViewItem(
-              controller: _controller,
-              index: index,
-            );
-          },
-          itemCount: pageViewModelList.length,
-          onPageChanged: (index) {
-            setState(() {
-              VariableApp.currentIndex = index;
-              // Update the background image based on the current index
-              _updateBackgroundImage();
-            });
-          },
-        ),
+          Positioned(
+              top: 83,
+              left:VariableApp.currentIndex==2? 170: 40,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image(image: AssetImage("assets/images/supermarket_images/onboarding/Vector.png"),
+                height: 37,
+                  width: 37,
+                ),
+                Text("FLOWER",
+                style: TextStyle(
+                    color: Color(0xff3C312F),
+                    fontSize: 28,
+                      fontFamily: "RozhaOne",
+                ),
+                ),
+                Row(
+                  children: [
+                    Image(image: AssetImage("assets/images/supermarket_images/onboarding/Line11.png")),
+                    SizedBox(width: 3,),
+                    Text("Super Market",
+                      style: TextStyle(
+                        color: Color(0xff3C312F),
+                        fontSize: 16,
+                        fontFamily: "Sarala",
+                      ),
+                    ),
+                    SizedBox(width: 3,),
+                    Image(image: AssetImage("assets/images/supermarket_images/onboarding/Line11.png")),
+                  ],
+                )
+              ],
+            ),
+          )
+        ]
       ),
 
     );

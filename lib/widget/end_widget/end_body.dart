@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/imagecore.dart';
 import 'package:flutter/material.dart';
 
 import '../../ui/home_page_Screen.dart';
@@ -11,14 +12,14 @@ class EndScreenBody extends StatelessWidget {
       backgroundColor: Colors.white,
      appBar: PreferredSize(
        preferredSize: Size(double.infinity,151),
-       child:  Image(image: AssetImage("assets/images/endScreeen.png")),
+       child:  Image(image: AssetImage(ImageApp.endPageBG_Image)),
      ),
      body: Padding(
        padding: const EdgeInsets.symmetric(horizontal: 23),
        child: Column(
          children: [
            SizedBox(height: 80,),
-           Image(image: AssetImage("assets/images/endbodycenter.png"),
+           Image(image: AssetImage(ImageApp.endPageLogo_Image),
            width: 221,
              height: 232,
            ),

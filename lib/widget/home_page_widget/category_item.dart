@@ -21,23 +21,23 @@ class _CategoryItemState extends State<CategoryItem> {
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>
         widget.index==0? CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.milkShakeText ).toList(),
-            titleAppbar: AppText.milkShakeText
+            models:categoryDetails.where((title) =>title.title==AppText.fruits_Text,).toList(),
+            titleAppbar: AppText.fruits_Text
         )
             :
         widget.index==1? CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.floreVitaminText ).toList(),
-            titleAppbar: AppText.floreVitaminText
+            models:categoryDetails.where((title) =>title.title==AppText.vegetables_Text, ).toList(),
+            titleAppbar: AppText.vegetables_Text
         )
             :
         widget.index==2? CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.spanishLatteText ).toList(),
-            titleAppbar: AppText.spanishLatteText
+            models:categoryDetails.where((title) =>title.title==AppText.hotDriknks_text ).toList(),
+            titleAppbar: AppText.hotDriknks_text
         )
             :
         CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.chocolateDrinksText ).toList(),
-            titleAppbar: AppText.chocolateDrinksText
+            models:categoryDetails.where((title) =>title.title==AppText.food_Text, ).toList(),
+            titleAppbar: AppText.food_Text,
         ),
         )
         );
