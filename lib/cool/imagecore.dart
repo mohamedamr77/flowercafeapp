@@ -47,5 +47,4 @@ class ImageApp{
   static const String pineappleImage="assets/images/supermarket_images/bestitems/pineapple.png";
   static const String pomegranateImage="assets/images/supermarket_images/bestitems/pomegranate.png";
 
-
 }
