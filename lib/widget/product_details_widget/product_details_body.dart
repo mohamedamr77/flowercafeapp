@@ -44,7 +44,6 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
               ),
             ),
             expandedHeight: MediaQuery.of(context).size.height*0.34,
-
           ),
           SliverToBoxAdapter(
             child: Container(

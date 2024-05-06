@@ -28,7 +28,6 @@ class _CartBodyState extends State<CartBody> {
   @override
   Widget build(BuildContext context) {
     List<ItemModel> cartItemList =modelsList.where((check) =>check.addCart==true ).toList();
-
     int getTotalSelectedItemsCount(){
       int count=0;
       for (ItemModel item in cartItemList) {
