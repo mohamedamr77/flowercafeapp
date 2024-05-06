@@ -2,10 +2,9 @@ import 'package:cafeflower/cool/colorcore.dart';
 import 'package:cafeflower/cool/imagecore.dart';
 import 'package:cafeflower/widget/product_details_widget/product_details_body.dart';
 import 'package:flutter/material.dart';
+import '../../cool/textcore.dart';
 import '../../model_varibale/category/category_details_model.dart';
 import '../../model_varibale/category/item_model.dart';
-import '../home_page_widget/search.dart';
-import 'category_details_item.dart';
 class CategoryDetailsBody extends StatefulWidget {
   const CategoryDetailsBody({super.key,required this.models,required this.titleAppbar});
   final List<CategoryDetailsModel> models;
@@ -26,6 +25,8 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
       itemDetailsList.addAll(item);
     }
   }
+
+  List<ItemModel> searchCategoryList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,52 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            CustomSearch(),
+            Row(
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    onChanged: (value){
+                      setState(() {
+                        searchCategoryList = itemDetailsList.where((element) =>element.nameProduct.toLowerCase().contains(value.toLowerCase())).toList();
+                      });
+                    },
+                    decoration: InputDecoration(
+                      hintText: AppText.seacrhformFieldText,
+                      hintStyle: TextStyle(
+                        color: Color(0xff3C312F4D).withOpacity(0.6),
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(color: ColorApp.basic_color, width: 0.5),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderSide: BorderSide(color: Color(0xffF7CCC6), width: 0.5),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width*0.03,),
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(0),
+                    bottomRight:Radius.circular(15),
+                    topRight: Radius.circular(15),
+                    topLeft: Radius.circular(15),
+                    ),
+                  child: CircleAvatar(
+                    backgroundColor: ColorApp.binklight_color,
+                    child: Center(
+                      child:Image(
+                        image: AssetImage("assets/images/Search icon.png"),
+                      ),
+                    ) ,
+                  ),
+                ),
+              ],
+            ),
             SizedBox(height: 20,),
             Container(
               height: 1,
@@ -104,7 +150,10 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(itemDetailsList[index].nameProduct.trim()!,
+                                Text(
+                                  searchCategoryList.isEmpty ?
+                                  itemDetailsList[index].nameProduct.trim()! :
+                                  searchCategoryList[index].nameProduct.trim()!,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -118,7 +167,10 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                                 SizedBox(
                                   width: MediaQuery.of(context).size.width*0.5,
                                   height: MediaQuery.of(context).size.height*0.06 ,
-                                  child: Text(itemDetailsList[index].describtion.trim(),
+                                  child: Text(
+                                    searchCategoryList.isEmpty?
+                                    itemDetailsList[index].describtion.trim():
+                                    searchCategoryList[index].describtion.trim(),
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -129,7 +181,10 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                                   ),
                                 ),
                                 SizedBox(height: 5,),
-                                Text("${itemDetailsList[index].price} LE",
+                                Text(
+                                  searchCategoryList.isEmpty?
+                                  "${itemDetailsList[index].price} LE":
+                                  "${searchCategoryList[index].price} LE",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -165,7 +220,11 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                     ],
                   ),
                 ),
-                itemCount: itemDetailsList.length,
+                itemCount:
+                searchCategoryList.isEmpty ?
+                itemDetailsList.length
+                    :
+                    searchCategoryList.length,
               ),
             )
           ],
