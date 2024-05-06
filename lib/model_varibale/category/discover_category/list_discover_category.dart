@@ -10,19 +10,19 @@ List<DiscoverCategoryModel> discoverCategoryList=[
   ),
 
   DiscoverCategoryModel(
-      image: ImageApp.floreitamin_Drinks_Image,
-      name: AppText.floreVitaminText
+      image: ImageApp.Espresso_Image,
+      name: AppText.EspressoText
   ),
 
   DiscoverCategoryModel(
-      image: ImageApp.spanishLatte_Drinks_Image,
-      name: AppText.spanishLatteText
+      image: ImageApp.coffee_image,
+      name: AppText.coffee_text
   ),
 
 
   DiscoverCategoryModel(
-      image: ImageApp.chocolated_Drinks_Image,
-      name: AppText.chocolateDrinksText
+      image: ImageApp.food_image,
+      name: AppText.food_text
   ),
 
 ];

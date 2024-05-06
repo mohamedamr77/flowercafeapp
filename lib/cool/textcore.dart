@@ -15,9 +15,9 @@ class AppText{
    static const String seacrhformFieldText="search here  ..";
    static const String discoverCategoryText="Discover by category";
    static const String seeAllText="See All";
-   static const String floreVitaminText="Flore vitamin";
-   static const String spanishLatteText="Spanish latte";
-   static const String chocolateDrinksText="Chocolate drinks";
+   static const String EspressoText="Espresso";
+   static const String coffee_text="Coffee";
+   static const String food_text="Food";
    static const String flavorText="Flavor";
    static const String bestSellingText="Best Selling";
 
@@ -30,6 +30,7 @@ class AppText{
 
    static const String describtionText="There are many variations of passages of Lorem Ipsum available, he majority have There are many variations of passages of Lorem Ipsum available, he majority have";
 
+   //cofe
 
 }
 

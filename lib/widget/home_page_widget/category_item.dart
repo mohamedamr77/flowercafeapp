@@ -26,18 +26,18 @@ class _CategoryItemState extends State<CategoryItem> {
         )
             :
         widget.index==1? CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.floreVitaminText ).toList(),
-            titleAppbar: AppText.floreVitaminText
+            models:categoryDetails.where((title) =>title.title==AppText.EspressoText ).toList(),
+            titleAppbar: AppText.EspressoText
         )
             :
         widget.index==2? CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.spanishLatteText ).toList(),
-            titleAppbar: AppText.spanishLatteText
+            models:categoryDetails.where((title) =>title.title==AppText.coffee_text ).toList(),
+            titleAppbar: AppText.coffee_text
         )
             :
         CategoryDetailsBody(
-            models:categoryDetails.where((title) =>title.title==AppText.chocolateDrinksText ).toList(),
-            titleAppbar: AppText.chocolateDrinksText
+            models:categoryDetails.where((title) =>title.title==AppText.food_text ).toList(),
+            titleAppbar: AppText.food_text
         ),
         )
         );
