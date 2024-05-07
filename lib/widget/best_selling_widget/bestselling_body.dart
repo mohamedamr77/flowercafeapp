@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../cool/colorcore.dart';
 import '../../cool/imagecore.dart';

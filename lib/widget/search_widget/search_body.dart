@@ -6,7 +6,6 @@ import '../../cool/textcore.dart';
 import '../../model_varibale/category/categoey_details_list.dart';
 import '../../model_varibale/category/category_details_model.dart';
 import '../../model_varibale/category/item_model.dart';
-import '../product_details_widget/product_details_body.dart';
 
 class SearchBody extends StatefulWidget {
   const SearchBody({super.key});
@@ -151,8 +150,8 @@ class _SearchBodyState extends State<SearchBody> {
                                 //(itemDetailsList[index].nameProduct.trim()!
                                 Text(
                                   searchList.isEmpty?
-                                  "${itemsList[index].nameProduct.trim()!}":
-                                  "${searchList[index].nameProduct.trim()!}",
+                                  "${itemsList[index].nameProduct.trim()}":
+                                  "${searchList[index].nameProduct.trim()}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(

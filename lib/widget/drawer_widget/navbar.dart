@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../ui/favourite_screen.dart';
 import '../../ui/login_screen.dart';
 import '../../ui/signup_screen.dart';
+import '../cart_widget/cart_Widget_body.dart';
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
@@ -30,17 +31,19 @@ class NavBar extends StatelessWidget {
               ),
             ),
           ),
-          const Card(
+          Card(
             child: ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text("Account"),
-
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CartBody(),));
+              },
+              leading: Icon(Icons.shopping_cart),
+              title: Text("Orders"),
             ),
           ),
           Card(
             child: ListTile(
               onTap: (){
-                 Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(),));
+                Navigator.push(context, MaterialPageRoute(builder:(context) => LoginScreen(),));
               },
               leading: const Icon(Icons.login),
               title: const Text("loign"),
@@ -57,7 +60,7 @@ class NavBar extends StatelessWidget {
 
             ),
           ),
-           Card(
+          Card(
             child: ListTile(
               leading: Icon(Icons.favorite_outlined),
               title: Text("Favourites"),
@@ -73,8 +76,11 @@ class NavBar extends StatelessWidget {
               title: Text("settings"),
             ),
           ),
+
+
         ],
       ),
     );
   }
 }
+

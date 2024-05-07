@@ -1,11 +1,9 @@
-import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../../cool/colorcore.dart';
 import '../../cool/imagecore.dart';
 import '../../model_varibale/category/item_model.dart';
 import '../cart_widget/cart_Widget_body.dart';
-import 'bottom_shet_widget.dart';
 
 class ProductDetailsBody extends StatefulWidget {
   final ItemModel item;
@@ -279,9 +277,3 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
   }
 }
 
-/*
- Navigator.push(
-                             context, MaterialPageRoute(builder: (context) => CartBody(),
-                         )
-                         ).then((value) {setState(() {});});
- */

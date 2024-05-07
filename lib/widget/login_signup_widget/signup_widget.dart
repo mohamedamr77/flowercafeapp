@@ -80,6 +80,7 @@ class _CustomSignUpBodyState extends State<CustomSignUpBody> {
                         checkPassword=value;
                         return 'Enter password';
                       }
+                      return null;
 
                   },
                   ),

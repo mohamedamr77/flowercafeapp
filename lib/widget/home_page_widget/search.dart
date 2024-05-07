@@ -1,4 +1,3 @@
-import 'package:cafeflower/cool/textcore.dart';
 import 'package:cafeflower/widget/search_widget/search_body.dart';
 import 'package:flutter/material.dart';
 

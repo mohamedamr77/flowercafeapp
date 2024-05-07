@@ -152,8 +152,8 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                               children: [
                                 Text(
                                   searchCategoryList.isEmpty ?
-                                  itemDetailsList[index].nameProduct.trim()! :
-                                  searchCategoryList[index].nameProduct.trim()!,
+                                  itemDetailsList[index].nameProduct.trim():
+                                  searchCategoryList[index].nameProduct.trim(),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(

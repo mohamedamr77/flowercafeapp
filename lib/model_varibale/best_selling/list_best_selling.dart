@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:cafeflower/cool/imagecore.dart';
 import 'package:cafeflower/cool/textcore.dart';
