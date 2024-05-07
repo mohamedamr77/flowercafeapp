@@ -12,10 +12,9 @@ class CustomListViewCategory extends StatelessWidget{
         itemBuilder: (context, index) => CategoryItem(
           index: index,
         ),
-        itemCount: discoverCategoryList.length, separatorBuilder: (BuildContext context, int index) => SizedBox(width: MediaQuery.of(context).size.width*0.041,),
+        itemCount: discoverCategoryList.length,
+        separatorBuilder: (BuildContext context, int index) => SizedBox(width: MediaQuery.of(context).size.width*0.05,),
       ),
     );
   }
-
-
 }

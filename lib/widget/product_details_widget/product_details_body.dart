@@ -1,9 +1,11 @@
 import 'package:cafeflower/cool/textcore.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import '../../cool/colorcore.dart';
 import '../../cool/imagecore.dart';
 import '../../model_varibale/category/item_model.dart';
 import '../cart_widget/cart_Widget_body.dart';
+import 'bottom_shet_widget.dart';
 
 class ProductDetailsBody extends StatefulWidget {
   final ItemModel item;
@@ -198,14 +200,55 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
                     GestureDetector(
                        onTap: (){
                          widget.item.addCart=true;
+                           showModalBottomSheet(
+                             shape: const RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.vertical(
+                                   top: Radius.circular(20.0),
 
-                         Navigator.push
-                           (
-                             context, MaterialPageRoute(builder: (context) => CartBody(),
-                         )
-                         ).then((value) {setState(() {
-                           });});
+                                 )
+                             ),
+                             context: context, builder: (context) {
+                             return SizedBox(
 
+                               child: Column(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 crossAxisAlignment: CrossAxisAlignment.center,
+                                 children: [
+                                   SizedBox(
+                                       width: MediaQuery.of(context).size.width/2,
+                                       child: Lottie.asset(ImageApp.lottie1Image)),
+                                   SizedBox(height: 10,),
+                                   GestureDetector(
+                                     child: Container(
+                                       margin:EdgeInsets.symmetric(horizontal:  MediaQuery.of(context).size.width*0.025) ,
+                                       width: double.infinity,
+                                       padding: EdgeInsets.symmetric(vertical:  MediaQuery.of(context).size.height*0.025),
+                                       decoration: BoxDecoration(
+                                         color: Color(0xff3C312F),
+                                         borderRadius: BorderRadius.circular(12),
+                                       ),
+                                       child: Center(
+                                         child: Text("Orders",
+                                           style: TextStyle(
+                                             color: Colors.white,
+                                             fontWeight: FontWeight.w700,
+                                             fontSize: 17,
+                                           ),
+                                         ),
+                                       ),
+                                     ),
+                                     onTap: (){
+                                       Navigator.push(
+                                           context, MaterialPageRoute(builder: (context) => CartBody(),
+                                       )
+                                       ).then((value) {setState(() {});});
+                                     },
+                                   ),
+                                 ],
+                               ),
+                             );
+                           },
+                           );
                        },
                       child: Container(
                         width: double.infinity,
@@ -235,3 +278,10 @@ class _ProductDetailsBodyState extends State<ProductDetailsBody> {
     );
   }
 }
+
+/*
+ Navigator.push(
+                             context, MaterialPageRoute(builder: (context) => CartBody(),
+                         )
+                         ).then((value) {setState(() {});});
+ */

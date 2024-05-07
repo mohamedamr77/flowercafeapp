@@ -58,6 +58,7 @@ class ImageApp{
   static const  String  SushiImage="assets/images/food/Sushi.png";
   static const  String  PataImage="assets/images/food/Pasta.png";
 
+  static const  String  lottie1Image="assets/images/lottie/Animation - 1715032042036.json";
 
 
 
