@@ -5,7 +5,7 @@ import 'item_model.dart';
 
 List<CategoryDetailsModel> categoryDetails=[
   CategoryDetailsModel(
-      title: AppText.fruits_Text,
+      title: "Fruits",
       items: [
         ItemModel(
           image: "assets/images/supermarket_images/fruits/Papaya.png",
@@ -125,10 +125,9 @@ List<CategoryDetailsModel> categoryDetails=[
     ],
   ),
 
-CategoryDetailsModel(
+  CategoryDetailsModel(
     title: AppText.hotDriknks_text,
     items: [
-
       ItemModel(
         image: ImageApp.vanillaMillkshake_Image,
         nameProduct: "Vanilla Milkshake",
@@ -141,24 +140,7 @@ CategoryDetailsModel(
         describtion: AppText.describtionText,
         price: 90,
       ),
-      // ItemModel(
-      //   image: ImageApp.mangoMilkshake_Image,
-      //   nameProduct: "Mango Milkshake",
-      //   describtion: AppText.describtionText,
-      //   price: 80,
-      // ),
-      // ItemModel(
-      //   image: ImageApp.vanillaMillkshake_Image,
-      //   nameProduct: "Vanilla Milkshake",
-      //   describtion: AppText.describtionText,
-      //   price: 100,
-      // ),
-      // ItemModel(
-      //   image: ImageApp.chocolateMilkshake_Image,
-      //   nameProduct: "Oreo Milkshake",
-      //   describtion: AppText.describtionText,
-      //   price: 90,
-      // ),
+
       ItemModel(
         image: ImageApp.oreoMilkshake_Image,
         nameProduct: "Oreo Milkshake",
@@ -242,7 +224,6 @@ CategoryDetailsModel(
         describtion: AppText.describtionText,
         price: 80,
       ),
-
 
       ItemModel(
         image: "assets/images/supermarket_images/food/Type=Food, Icon=Sushi.png",

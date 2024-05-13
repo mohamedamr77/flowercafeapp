@@ -35,7 +35,7 @@ class _CustomOnBoardingBodyState extends State<CustomOnBoardingBody> {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                VariableApp.currentIndex == 0
+                    VariableApp.currentIndex == 0
                     ? ImageApp.onBoarding_1_ScreenImage
                     : VariableApp.currentIndex == 1
                     ? ImageApp.onBoarding_2_ScreenImage

@@ -36,7 +36,6 @@ class AppText{
    static const String hotDrinks_Text="Price";
    static const String food_Text="Food";
 
-
    static const String vegetables_Text="Vegetables";
    static const String drinks_Text="hot Drinks";
 

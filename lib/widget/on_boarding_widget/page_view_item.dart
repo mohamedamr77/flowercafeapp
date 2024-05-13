@@ -21,7 +21,7 @@ class _CustomPageViewItemState extends State<CustomPageViewItem> {
     return Column(
       children: [
         SizedBox(
-          height: widget.index == 0
+           height: widget.index == 0
               ? MediaQuery.of(context).size.height * 0.33
               : widget.index == 1
               ? MediaQuery.of(context).size.height * 0.328

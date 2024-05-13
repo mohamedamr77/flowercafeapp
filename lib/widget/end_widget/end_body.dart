@@ -1,6 +1,7 @@
-import 'package:cafeflower/cool/imagecore.dart';
+
 import 'package:flutter/material.dart';
 
+import '../../cool/imagecore.dart';
 import '../../ui/home_page_Screen.dart';
 
 class EndScreenBody extends StatelessWidget {
