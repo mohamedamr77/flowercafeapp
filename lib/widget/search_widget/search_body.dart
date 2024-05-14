@@ -94,7 +94,7 @@ class _SearchBodyState extends State<SearchBody> {
                     backgroundColor: ColorApp.binklight_color,
                     child: Center(
                       child:Image(
-                        image: AssetImage("assets/images/Search icon.png"),
+                        image: AssetImage(ImageApp.search_Image),
                       ),
                     ) ,
                   ),

@@ -1,3 +1,4 @@
+import 'package:cafeflower/cool/imagecore.dart';
 import 'package:cafeflower/widget/search_widget/search_body.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class CustomSearch extends StatelessWidget{
             backgroundColor: ColorApp.binklight_color,
             child: Center(
               child:Image(
-                image: AssetImage("assets/images/Search icon.png"),
+                image: AssetImage(ImageApp.search_Image),
               ),
             ) ,
           ),
