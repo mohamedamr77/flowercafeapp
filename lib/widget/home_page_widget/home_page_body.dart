@@ -21,7 +21,7 @@ class CustomHomePageBody extends StatelessWidget {
       child: CustomScrollView(
         physics: NeverScrollableScrollPhysics(),
         slivers: [
-          SliverToBoxAdapter(child: const  CustomBanner(image: ImageApp.homePage_flower_Image, text: AppText.chooseSuitsText)), //done
+          SliverToBoxAdapter(child:   CustomBanner()), //done
           SliverToBoxAdapter(child:    SizedBox(height: MediaQuery.of(context).size.height*0.022,)), //done
           SliverToBoxAdapter(child: CustomSearch()), //done
           SliverToBoxAdapter(

@@ -1,42 +1,40 @@
-import 'package:cafeflower/cool/colorcore.dart';
-import 'package:cafeflower/cool/imagecore.dart';
-import 'package:cafeflower/widget/product_details_widget/product_details_body.dart';
 import 'package:flutter/material.dart';
+import '../../cool/colorcore.dart';
+import '../../cool/imagecore.dart';
 import '../../cool/textcore.dart';
+import '../../model_varibale/category/categoey_details_list.dart';
 import '../../model_varibale/category/category_details_model.dart';
 import '../../model_varibale/category/item_model.dart';
-class CategoryDetailsBody extends StatefulWidget {
-  const CategoryDetailsBody({super.key,required this.models,required this.titleAppbar});
-  final List<CategoryDetailsModel> models;
-  final String titleAppbar;
+
+class SearchBody extends StatefulWidget {
+  const SearchBody({super.key});
 
   @override
-  State<CategoryDetailsBody> createState() => _CategoryDetailsBodyState();
+  State<SearchBody> createState() => _SearchBodyState();
 }
 
-class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
+class _SearchBodyState extends State<SearchBody> {
 
-  List<ItemModel> itemDetailsList=[];
-
+  List<ItemModel> itemsList=[];
   void initState(){
     super.initState();
-    for (CategoryDetailsModel itemModel in widget.models) {
+    for (CategoryDetailsModel itemModel in categoryDetails) {
       List<ItemModel> item = itemModel.items;
-      itemDetailsList.addAll(item);
+      itemsList.addAll(item);
     }
   }
 
-  List<ItemModel> searchCategoryList = [];
+  List<ItemModel> searchList = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(
+      appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         foregroundColor: Colors.black,
         centerTitle: true,
-        title: Text("${widget.titleAppbar.trim()}",
+        title: Text("Search",
           style: TextStyle(
             color: ColorApp.basic_color,
             fontSize: 18,
@@ -56,7 +54,7 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: EdgeInsets.all(16),
         child: Column(
           children: [
             Row(
@@ -65,7 +63,7 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                   child: TextFormField(
                     onChanged: (value){
                       setState(() {
-                        searchCategoryList = itemDetailsList.where((element) =>element.nameProduct.toLowerCase().contains(value.toLowerCase())).toList();
+                        searchList = itemsList.where((element) =>element.nameProduct.toLowerCase().contains(value.toLowerCase())).toList();
                       });
                     },
                     decoration: InputDecoration(
@@ -75,15 +73,13 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                       ),
-                      enabledBorder: OutlineInputBorder(
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         borderSide: BorderSide(color: ColorApp.basic_color, width: 0.5),
                       ),
-                      disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        borderSide: BorderSide(color: Color(0xffF7CCC6), width: 0.5),
-                      ),
+
                     ),
+
                   ),
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width*0.03,),
@@ -111,18 +107,17 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
               width: double.infinity,
               color: ColorApp.binklight_color,
             ),
-            SizedBox(
-              height: 35,
-            ),
+            SizedBox(height: 20,),
             Expanded(
               child: ListView.separated(
                 separatorBuilder: (context, index) => SizedBox(height: 14,),
                 itemBuilder: (context, index) => GestureDetector(
                   onTap:(){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                        ProductDetailsBody(
-                          item: itemDetailsList[index],
-                        )));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                    //     ProductDetailsBody(
+                    //       //itemDetailsList[index]
+                    //       item: ,
+                    //     )));
                   },
                   child: Stack(
                     alignment: Alignment.bottomRight,
@@ -144,16 +139,18 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                               width: 0.6,
                             )
                         ),
+
                         child: Row(
                           children: [
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                //(itemDetailsList[index].nameProduct.trim()!
                                 Text(
-                                  searchCategoryList.isEmpty ?
-                                  itemDetailsList[index].nameProduct.trim():
-                                  searchCategoryList[index].nameProduct.trim(),
+                                  searchList.isEmpty?
+                                  "${itemsList[index].nameProduct.trim()}":
+                                  "${searchList[index].nameProduct.trim()}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -167,10 +164,12 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                                 SizedBox(
                                   width: MediaQuery.of(context).size.width*0.5,
                                   height: MediaQuery.of(context).size.height*0.06 ,
+                                  //itemDetailsList[index].describtion.trim(),
                                   child: Text(
-                                    searchCategoryList.isEmpty?
-                                    itemDetailsList[index].describtion.trim():
-                                    searchCategoryList[index].describtion.trim(),
+                                    searchList.isEmpty ?
+                                    "${itemsList[index].describtion.trim()}":
+                                    "${searchList[index].describtion.trim()}"
+                                    ,
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -181,10 +180,11 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                                   ),
                                 ),
                                 SizedBox(height: 5,),
+                                //${itemDetailsList[index].price}
                                 Text(
-                                  searchCategoryList.isEmpty?
-                                  "${itemDetailsList[index].price} LE":
-                                  "${searchCategoryList[index].price} LE",
+                                  searchList.isEmpty ?
+                                  "${itemsList[index].price} LE" :
+                                  "${searchList[index].price} LE",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -198,7 +198,13 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                             Image(
                               width: MediaQuery.of(context).size.width*0.34,
                               height: MediaQuery.of(context).size.height*0.15,
-                              image: AssetImage(itemDetailsList[index].image),
+                              // itemDetailsList[index].image
+                              image: AssetImage(
+                                searchList.isEmpty?
+                                "${itemsList[index].image}"
+                                    :
+                                "${searchList[index].image}",
+                              ),
                             ),
                           ],
                         ),
@@ -220,11 +226,7 @@ class _CategoryDetailsBodyState extends State<CategoryDetailsBody> {
                     ],
                   ),
                 ),
-                itemCount:
-                searchCategoryList.isEmpty ?
-                itemDetailsList.length
-                    :
-                searchCategoryList.length,
+                itemCount: searchList.isEmpty? itemsList.length:searchList.length,
               ),
             )
           ],

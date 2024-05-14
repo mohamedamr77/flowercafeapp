@@ -1,30 +1,35 @@
-import 'package:cafeflower/cool/imagecore.dart';
-import 'package:cafeflower/cool/textcore.dart';
+import 'package:cafeflower/widget/search_widget/search_body.dart';
 import 'package:flutter/material.dart';
 
 import '../../cool/colorcore.dart';
 
 class CustomSearch extends StatelessWidget{
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
-          child: TextFormField(
-            decoration: InputDecoration(
-              hintText: AppText.seacrhformFieldText,
-              hintStyle: TextStyle(
-                color: Color(0xff3C312F4D).withOpacity(0.6),
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
+          child: GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SearchBody(),));
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 15,
               ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                borderSide: BorderSide(color: ColorApp.basic_color, width: 0.5),
+
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: Color(0xff3C312F).withOpacity(0.5),
+                  )
               ),
+              child: Text("search here .."),
 
             ),
-
           ),
         ),
         SizedBox(width: MediaQuery.of(context).size.width*0.03,),
@@ -39,7 +44,7 @@ class CustomSearch extends StatelessWidget{
             backgroundColor: ColorApp.binklight_color,
             child: Center(
               child:Image(
-                image: AssetImage(ImageApp.search_Image),
+                image: AssetImage("assets/images/Search icon.png"),
               ),
             ) ,
           ),
